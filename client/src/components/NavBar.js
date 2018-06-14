@@ -24,7 +24,7 @@ const NavBar = ({ history }) => (
         <Fragment>
           {' '}
           <NavLink activeStyle={styles.active} to="/menu">
-            Menu
+            Main Menu
           </NavLink>
           {' '}
           <span style={styles.link} onClick={ () => {

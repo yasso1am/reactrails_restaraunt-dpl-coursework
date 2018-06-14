@@ -1,6 +1,6 @@
 class Api::ItemsController < Api::ApiController
   before_action  :set_menu
-  before_action :set_item, only [:show, :update, :destroy]
+  before_action :set_item, only: [:show, :update, :destroy]
   
   def index
     render json: @menu.items.all
@@ -16,7 +16,7 @@ class Api::ItemsController < Api::ApiController
     if item.save
       render json: item
     else
-      render json: item.errors, status: 422
+      render_errors(item)
     end
   end
 
@@ -24,7 +24,7 @@ class Api::ItemsController < Api::ApiController
     if @item.update(item_params)
       render json: @item
     else
-      render json: @item.errors, status 422
+      render_errors(@item)
     end
   end
 

@@ -6,6 +6,7 @@ import NoMatch from './components/NoMatch';
 import NavBar from './components/NavBar';
 import Login from './components/Login';
 import Menu from './components/Menu';
+import List from './components/List';
 import ProtectedRoute from './components/ProtectedRoute'
 
 
@@ -16,6 +17,7 @@ const App = () => (
       <Route exact path="/" component={Home} />
       <Route exact path="/about" component={About} />
       <ProtectedRoute exact path="/menu" component={Menu} />
+      <ProtectedRoute exact path="/menus/:id" component={List} />
       <Route exact path="/login" component={Login} />
 
       <Route component={NoMatch} />

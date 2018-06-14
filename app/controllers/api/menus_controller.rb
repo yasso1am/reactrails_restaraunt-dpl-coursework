@@ -1,5 +1,5 @@
 class Api::MenusController < Api::ApiController
-  before_action :show, only: [:show]
+  before_action :set_menu, only: [:show]
   
   def index
     render json: Menu.all
