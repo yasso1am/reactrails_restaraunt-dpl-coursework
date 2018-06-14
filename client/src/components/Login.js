@@ -3,11 +3,11 @@ import { login } from '../fakeAuth';
 
 const Login = ({ history}) => (
   <Fragment>
-    <h3>Login</h3>
+    <h3>Login to see our lovely restaurant</h3>
     <button
       onClick={ () => {
         login()
-        history.push('/dashboard')
+        history.push('/')
       }}
     >
       Easy Login

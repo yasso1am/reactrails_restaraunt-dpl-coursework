@@ -19,13 +19,13 @@ const NavBar = ({ history }) => (
   <nav>
     <NavLink exact activeStyle={styles.active} to="/">Home</NavLink>
     {' '}
-    {/* <NavLink activeStyle={styles.active} to="/about">About</NavLink> */}
+    <NavLink activeStyle={styles.active} to="/about">About</NavLink>
     { isAuthenticated() ?
         <Fragment>
           {' '}
-          {/* <NavLink activeStyle={styles.active} to="/dashboard">
-            Dashboard
-          </NavLink> */}
+          <NavLink activeStyle={styles.active} to="/menu">
+            Menu
+          </NavLink>
           {' '}
           <span style={styles.link} onClick={ () => {
             logout()

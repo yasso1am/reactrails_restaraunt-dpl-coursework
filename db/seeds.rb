@@ -21,7 +21,7 @@ end
   end
 
 1.times do
-  menu = Menu.create(name: 'Breakfast')
+  menu = Menu.create(name: 'Dinner')
       15.times do
       menu.items.create(
         name: Faker::Food.dish,
